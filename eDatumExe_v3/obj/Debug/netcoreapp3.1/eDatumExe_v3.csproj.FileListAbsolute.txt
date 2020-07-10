@@ -1,0 +1,16 @@
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\eDatumExe_v3.exe
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\obj\Debug\netcoreapp3.1\eDatumExe_v3.csprojAssemblyReference.cache
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\obj\Debug\netcoreapp3.1\eDatumExe_v3.AssemblyInfoInputs.cache
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\obj\Debug\netcoreapp3.1\eDatumExe_v3.AssemblyInfo.cs
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\WebDriver.dll
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\obj\Debug\netcoreapp3.1\eDatumExe_v3.csproj.CopyComplete
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\eDatumExe_v3.deps.json
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\eDatumExe_v3.runtimeconfig.json
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\eDatumExe_v3.runtimeconfig.dev.json
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\eDatumExe_v3.dll
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\eDatumExe_v3.pdb
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\obj\Debug\netcoreapp3.1\eDatumExe_v3.dll
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\obj\Debug\netcoreapp3.1\eDatumExe_v3.pdb
+C:\Users\ZZ\source\repos\eDatumExe_v3\eDatumExe_v3\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
