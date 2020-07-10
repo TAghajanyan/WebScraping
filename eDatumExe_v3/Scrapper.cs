@@ -29,7 +29,7 @@ namespace eDatumExe_v3
             string jsonBetCityRu = null;
             string json1xBet = null;
 
-            var betCityRuScrapper = new BetCityRuScrapper("https://betcityru.com/en/results/soccer");
+            var betCityRuScrapper = new BetCityRu("https://betcityru.com/en/results/soccer");
             var oneXBet = new OneXBet("https://1xbet.com/en/results/");
 
             do
@@ -51,7 +51,7 @@ namespace eDatumExe_v3
                 Console.WriteLine("Data appended!!!");
                 Console.ResetColor();
 
-                Thread.Sleep(10000);
+                Thread.Sleep(180000);
 
             } while (true);
 

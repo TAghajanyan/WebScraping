@@ -3,6 +3,7 @@
     public class ResultsChampEvents
     {
         public int Id { get; set; }
+        public string EventTime { get; set; }
         public string Competitors { get; set; }
         public string Score { get; set; }
     }

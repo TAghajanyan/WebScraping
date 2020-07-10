@@ -3,14 +3,15 @@ using Newtonsoft.Json;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace eDatumExe_v3
 {
-    public class BetCityRuScrapper : Scrapper
+    public class BetCityRu : Scrapper
     {
         private int Id { get; set; }
         private readonly string _link;
-        public BetCityRuScrapper(string link)
+        public BetCityRu(string link)
         {
             Id = 1;
             _link = link;
@@ -47,26 +48,28 @@ namespace eDatumExe_v3
             try
             {
                 document.LoadHtml(content);
-                HtmlNodeCollection ligas = document.DocumentNode.SelectNodes(".//div[@class='results-champ']");
+                IEnumerable<HtmlNode> ligas = document.DocumentNode.SelectNodes(".//div[@class='results-champ']")
+                    .Where(x => x.Attributes.Count < 3);
 
                 foreach (var liga in ligas)
                 {
                     var id_evn = 1;
                     List<ResultsChampEvents> resultsChampEvents = new List<ResultsChampEvents>();
 
-                    var ligaName = liga.ChildNodes[0].SelectSingleNode(".//div[@class='results-champ__title-text']")?.InnerText;
+                    var ligaName = liga.ChildNodes[0].SelectSingleNode(".//div[@class='results-champ__title-text']").InnerText;
 
-                    if (!ligaName.Contains("football") && !ligaName.Contains("soccer"))
+                    if (!ligaName.Contains("football", StringComparison.OrdinalIgnoreCase) && !ligaName.Contains("soccer", StringComparison.OrdinalIgnoreCase))
                         continue;
 
                     foreach (var item in liga.ChildNodes[1].SelectNodes(".//app-results-event"))
                     {
-                        string competitors = item.SelectSingleNode(".//span[@class='results-event__name']")?.InnerText;
-                        string score = item.SelectSingleNode(".//b")?.InnerText;
-
+                        string competitors = item.SelectSingleNode(".//span[@class='results-event__name']").InnerText;
+                        string score = item.SelectSingleNode(".//b").InnerText;
+                        string time = item.SelectSingleNode(".//span[@class='results-event__time']").InnerText;
                         resultsChampEvents.Add(new ResultsChampEvents()
                         {
                             Id = id_evn++,
+                            EventTime = time,
                             Competitors = competitors,
                             Score = score
                         });

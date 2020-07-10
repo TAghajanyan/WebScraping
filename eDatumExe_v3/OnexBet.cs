@@ -62,16 +62,17 @@ namespace eDatumExe_v3
                     var id_evn = 1;
                     List<ResultsChampEvents> resultsChampEvents = new List<ResultsChampEvents>();
 
-                    var ligaName = liga.ChildNodes[0].SelectSingleNode(".//div[@class='c-games__name']")?.InnerText;
+                    var ligaName = liga.ChildNodes[0].SelectSingleNode(".//div[@class='c-games__name']").InnerText;
 
                     foreach (var item in liga.SelectNodes(".//div[@class='c-games__row u-nvpd c-games__row_light c-games__row_can-toggle']"))
                     {
-                        string competitors = item.SelectSingleNode(".//div[@class='c-games__opponents u-dir-ltr']")?.InnerText;
-                        string score = item.SelectSingleNode(".//div[@class='c-games__results u-mla u-tar']")?.InnerText;
-
+                        string competitors = item.SelectSingleNode(".//div[@class='c-games__opponents u-dir-ltr']").InnerText;
+                        string score = item.SelectSingleNode(".//div[@class='c-games__results u-mla u-tar']").InnerText;
+                        string time = item.SelectSingleNode(".//div[@class='c-games__date']").InnerText;
                         resultsChampEvents.Add(new ResultsChampEvents()
                         {
                             Id = id_evn++,
+                            EventTime = time,
                             Competitors = StringBeauty(competitors),
                             Score = StringBeauty(score)
                         });
