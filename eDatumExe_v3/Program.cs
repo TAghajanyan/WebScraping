@@ -6,7 +6,6 @@ namespace eDatumExe_v3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Press 'Esc' for cancel!");
             Scrapper.GetDataWithin3MinutesInterval();
         }
     }
