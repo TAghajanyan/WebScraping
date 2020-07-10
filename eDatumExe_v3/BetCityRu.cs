@@ -58,9 +58,6 @@ namespace eDatumExe_v3
 
                     var ligaName = liga.ChildNodes[0].SelectSingleNode(".//div[@class='results-champ__title-text']").InnerText;
 
-                    if (!ligaName.Contains("football", StringComparison.OrdinalIgnoreCase) && !ligaName.Contains("soccer", StringComparison.OrdinalIgnoreCase))
-                        continue;
-
                     foreach (var item in liga.ChildNodes[1].SelectNodes(".//app-results-event"))
                     {
                         string competitors = item.SelectSingleNode(".//span[@class='results-event__name']").InnerText;
